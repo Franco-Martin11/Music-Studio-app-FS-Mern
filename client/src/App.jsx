@@ -1,5 +1,6 @@
 import DateComponent from './components/DateComponent/DateComponent'
 import Hero from './components/Hero/Hero'
+import AvailableSlots from './components/AvailableSlots/AvailableSlots'
 import './App.css'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Hero/>
       <DateComponent/>
+      <AvailableSlots/>
     </div>
   )
 }
