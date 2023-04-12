@@ -5,11 +5,13 @@ const timeSlotsCollection = 'timeSlot'
 const timeSlotSchema = new mongoose.Schema({
     date: {
       type: String,
-      required: true
+      require: true,
+      unique: true
     },
     time: {
       type: String,
-      required: true
+      require: true,
+      unique: true
     }
   });
 

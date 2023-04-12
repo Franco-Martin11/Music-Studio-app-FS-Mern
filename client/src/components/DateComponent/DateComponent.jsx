@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
 import { useState } from "react";
+import "./DateComponent.css";
 
 const DateComponent = () => {
   const [date, setDate] = useState(DateTime.now().toISODate());
@@ -40,20 +41,20 @@ const DateComponent = () => {
   };
 
   return (
-    <div>
-      <label>Fecha:</label>
-      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
-      <br />
-      <label>Hora:</label>
-      <select value={hour} onChange={(e) => setHour(parseInt(e.target.value))}>
-        {renderHours()}
-      </select>
-      <br />
+    <div className="container">
+      <div className="dateContainer">
+        <label>Fecha:</label>
+        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+      </div>
+      <div className="dateContainer">
+        <label>Hora:</label>
+        <select value={hour} onChange={(e) => setHour(parseInt(e.target.value))}>
+          {renderHours()}
+        </select>
+      </div>
       <button onClick={handleClick}>Reservar</button>
     </div>
   );
 };
 
 export default DateComponent;
-
-
