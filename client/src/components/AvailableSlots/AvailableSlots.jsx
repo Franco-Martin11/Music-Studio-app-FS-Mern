@@ -35,7 +35,7 @@ const AvailableSlots = () => {
   
     const slot = slotsArray.find(slot => slot.time === time);
   
-    return slot === undefined ? "Disponible" : "Ocupado";
+    return slot === undefined ? "Available" : "Not Available";
   };
   
 
@@ -61,7 +61,7 @@ const AvailableSlots = () => {
               return (
                 <td 
                   key={dateISO}
-                  className={`${styles.cell} ${getSlotStatus(dateISO, time) === "Disponible" ? styles.green : styles.red}`}
+                  className={`${styles.cell} ${getSlotStatus(dateISO, time) === "Available" ? styles.green : styles.red}`}
                 >
                   {getSlotStatus(dateISO, time)}
                 </td>

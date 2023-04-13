@@ -35,24 +35,32 @@ const DateComponent = () => {
     const hours = Array.from(Array(12).keys()).map((hour) => hour + 12);
     return hours.map((hour) => (
       <option key={hour} value={hour}>
-        {hour % 12 === 0 ? "12 PM" : `${hour % 12}:00 ${hour < 12 ? "AM" : "PM"}`}
+        {hour}:00
       </option>
     ));
   };
+  
 
   return (
     <div className="container">
       <div className="dateContainer">
-        <label>Fecha:</label>
-        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        <label>Date:</label>
+        <input
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
       </div>
       <div className="dateContainer">
-        <label>Hora:</label>
-        <select value={hour} onChange={(e) => setHour(parseInt(e.target.value))}>
+        <label>Time:</label>
+        <select
+          value={hour}
+          onChange={(e) => setHour(parseInt(e.target.value))}
+        >
           {renderHours()}
         </select>
       </div>
-      <button onClick={handleClick}>Reservar</button>
+      <button onClick={handleClick}>Book</button>
     </div>
   );
 };
