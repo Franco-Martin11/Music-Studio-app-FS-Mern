@@ -1,15 +1,12 @@
-import DateComponent from "./components/DateComponent/DateComponent";
 import Hero from "./components/Hero/Hero";
-import AvailableSlots from "./components/AvailableSlots/AvailableSlots";
 
 import "./App.css";
-
+import DatePicker from "./components/DatePicker";
 function App() {
   return (
     <div className="App">
       <Hero />
-      <DateComponent />
-      <AvailableSlots />
+      <DatePicker />
     </div>
   );
 }
